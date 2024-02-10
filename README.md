@@ -28,10 +28,10 @@ FONT_FILE = ""  # File name containing the font (I only tried: { "*.TTF" } files
   > Halt!  
   > Maybe you don't need to do this.  
   > There is a chance that you can install the library with pip.  
-  > At the time of writing this, there is an opened issue on fontforge GitHub titled:  
+  > At the time of writing this, there is an open issue on fontforge GitHub titled:  
   > `fontforge as a pip-installable Python module`  
   > Issue link: https://github.com/fontforge/fontforge/issues/4377  
-  > If you are reading this, and the issue is closed, you can probably install the library with pip:
+  > If you are reading this, and the issue is closed, you can probably install the library with pip.
 
   Then run the script with python:
 
