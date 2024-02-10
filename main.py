@@ -14,14 +14,15 @@ extension = ".png"
 source = f"{WORKING_DIR}/{FONT_FILE}"
 dest = f"{WORKING_DIR}/{font_folder}/{'{}'}{extension}"
 
-# The uppercase characters are overwritten by lowercase ones. So I just added count to the end of the name,
-# and made everything lowercase
+# The uppercase characters are overwritten by lowercase ones.
+# To solve this, I added count to the end of the name, and made everything lowercase.
 dict_count = {}
-# FontForge doesn't show prints, you can write messages to file but is shows exceptions conveniently in a warning window
+# FontForge doesn't show prints, you can write messages to file, but exceptions are conveniently shown in
+# a warning window, hence the strange code of adding everything to a list and raising an error with a message.
 message_list = ["\nMessage:\n"]
 counter = 0
 
-# It didn't work with context manager
+# Font file opening isn't done with context manager, because when it is closed, FontForge closes.
 font = open(source)
 for glyph in font:
     if not font[glyph].isWorthOutputting() or FONTFORGE_FILTER:
@@ -40,8 +41,6 @@ for glyph in font:
     message_list += [f"{counter} - {name}"]
 
     counter += 1
-
-# font file isn't closed because it closes FontForge
 
 # "print" message
 message_list.append("End of message\n")

@@ -53,4 +53,4 @@ To solve this, I added count to the end of the name, and made everything lowerca
 FontForge doesn't show prints, you can write messages to file, but exceptions are conveniently shown in  
 a warning window, hence the strange code of adding everything to a list and raising an error with a message.
 
-Font file opening isn't done with context manager, because when it is closed FontForge closes.
+Font file opening isn't done with context manager, because when it is closed, FontForge closes.
